@@ -1,0 +1,60 @@
+{
+  "pizzaItems": [
+    {
+      "id": 1,
+      "name": "Kebabpizza",
+      "price": 129,
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/330px-Pizza-3007395.jpg",
+      "ingredients": [
+        "Kebab", "Gurka"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Veganpizza",
+      "price": 139,
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/330px-Pizza-3007395.jpg",
+            "ingredients": [
+        "Kottar", "Gräs"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kanonpizza",
+      "price": 149,
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/330px-Pizza-3007395.jpg",
+            "ingredients": [
+        "Awesomesauce", "Strips"
+      ]
+    }
+  ],
+  "rollItems": [
+    {
+      "id": 4,
+      "name": "Kycklingrulle",
+      "price": 129,
+      "imgUrl": "https://images.squarespace-cdn.com/content/v1/5b10fd78f2e6b1ba5b7d5462/1668086480775-ENSVWZPUR2CMX5VR47YQ/SCHYSST_KAK_Klassisk_kebabrulle_Recept.png",
+            "ingredients": [
+        "Kyckling", "Gurka"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Falafelrulle",
+      "price": 139,
+      "imgUrl": "https://images.squarespace-cdn.com/content/v1/5b10fd78f2e6b1ba5b7d5462/1668086480775-ENSVWZPUR2CMX5VR47YQ/SCHYSST_KAK_Klassisk_kebabrulle_Recept.png",
+            "ingredients": [
+        "Falafel", "Gurka"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Grekisk rulle",
+      "price": 149,
+      "imgUrl": "https://images.squarespace-cdn.com/content/v1/5b10fd78f2e6b1ba5b7d5462/1668086480775-ENSVWZPUR2CMX5VR47YQ/SCHYSST_KAK_Klassisk_kebabrulle_Recept.png",
+            "ingredients": [
+        "Fetaost", "Gurka"
+      ]
+    }
+  ]
+}
