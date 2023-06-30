@@ -1,7 +1,12 @@
 <template>
-  <ul class="flex flex-row gap-2 p-4 bg-red-700 text-white">
-    <li>LOGO</li>
-    <li><NuxtLink to="/">Start</NuxtLink></li>
-    <li><NuxtLink to="/menupage">Our menu</NuxtLink></li>
-  </ul>
+  <div class="p-6 bg-[#8b3c7f]">
+    <ul
+      class="flex flex-row text-white items-center text-lg uppercase container gap-8"
+    >
+      <li><img src="../images/logo.png" class="max-w-[160px]" /></li>
+      <li><NuxtLink to="/">Start</NuxtLink></li>
+      <li><NuxtLink to="/menupage">Vår meny</NuxtLink></li>
+      <li><NuxtLink to="/contactpage">Kontakt</NuxtLink></li>
+    </ul>
+  </div>
 </template>

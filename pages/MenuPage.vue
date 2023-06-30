@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main container">
     <h1>Our awesome menu</h1>
     <h2>Pizzas</h2>
     <div class="flex flex-row gap-8">

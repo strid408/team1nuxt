@@ -1,5 +1,5 @@
 <template>
-  <div v-if="food">
+  <div v-if="food" class="main container">
     <img :src="food.imgUrl" />
     <h3>{{ food.name }}</h3>
     <p>{{ food.price }} kr</p>
