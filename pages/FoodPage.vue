@@ -1,5 +1,6 @@
 <template>
   <div v-if="food" class="main container">
+    <NuxtLink to="/menupage">Tillbaka</NuxtLink>
     <img :src="food.imgUrl" />
     <h3>{{ food.name }}</h3>
     <p>{{ food.price }} kr</p>
