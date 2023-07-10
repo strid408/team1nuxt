@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Kebabpizza",
       "price": 129,
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/330px-Pizza-3007395.jpg",
+      "imgUrl": "../images/pizza/kebabpizza.jpg",
       "ingredients": [
         "Kebab", "Gurka"
       ]
@@ -13,37 +13,37 @@
       "id": 2,
       "name": "Veganpizza",
       "price": 139,
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/330px-Pizza-3007395.jpg",
-            "ingredients": [
-        "Kottar", "Gräs"
+      "imgUrl": "../images/pizza/veganpizza.jpg",
+      "ingredients": [
+        "Seitan", "Vegansk sås"
       ]
     },
     {
       "id": 3,
       "name": "Kanonpizza",
       "price": 149,
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/330px-Pizza-3007395.jpg",
-            "ingredients": [
-        "Awesomesauce", "Strips"
+      "imgUrl": "../images/pizza/kanonpizza.jpg",
+      "ingredients": [
+        "Awesomesauce", "Pommes"
       ]
     }
   ],
   "rollItems": [
     {
       "id": 4,
-      "name": "Kycklingrulle",
+      "name": "Kebabrulle",
       "price": 129,
-      "imgUrl": "https://images.squarespace-cdn.com/content/v1/5b10fd78f2e6b1ba5b7d5462/1668086480775-ENSVWZPUR2CMX5VR47YQ/SCHYSST_KAK_Klassisk_kebabrulle_Recept.png",
-            "ingredients": [
-        "Kyckling", "Gurka"
+      "imgUrl": "../images/rolls/kebab.png",
+      "ingredients": [
+        "Kebab", "Gurka"
       ]
     },
     {
       "id": 5,
       "name": "Falafelrulle",
       "price": 139,
-      "imgUrl": "https://images.squarespace-cdn.com/content/v1/5b10fd78f2e6b1ba5b7d5462/1668086480775-ENSVWZPUR2CMX5VR47YQ/SCHYSST_KAK_Klassisk_kebabrulle_Recept.png",
-            "ingredients": [
+      "imgUrl": "../images/rolls/falafel.jpg",
+      "ingredients": [
         "Falafel", "Gurka"
       ]
     },
@@ -51,9 +51,38 @@
       "id": 6,
       "name": "Grekisk rulle",
       "price": 149,
-      "imgUrl": "https://images.squarespace-cdn.com/content/v1/5b10fd78f2e6b1ba5b7d5462/1668086480775-ENSVWZPUR2CMX5VR47YQ/SCHYSST_KAK_Klassisk_kebabrulle_Recept.png",
+      "imgUrl": "../images/rolls/grekisk.jpg",
+      "ingredients": [
+        "Fetaost", "Gurka", "Pommes"
+      ]
+    }
+  ],
+    "salladItems": [
+    {
+      "id": 7,
+      "name": "Caesarsallad",
+      "price": 99,
+      "imgUrl": "../images/sallad/ceasar.jpg",
             "ingredients": [
-        "Fetaost", "Gurka"
+        "Kyckling", "Gurka", "Sallad"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Falafelsallad",
+      "price": 89,
+      "imgUrl": "../images/sallad/falafel.webp",
+            "ingredients": [
+        "Falafel", "Gurka", "Tomat", "Sallad", "Majs"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Kebabsallad",
+      "price": 95,
+      "imgUrl": "../images/sallad/kebab.jpg",
+            "ingredients": [
+        "Kebab", "Tomat", "Sallad"
       ]
     }
   ]
