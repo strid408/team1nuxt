@@ -1,36 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    body {
-        font-family: 'Roboto Condensed', sans-serif;
-    }
-    h1, h2, h3 {
-        @apply font-bold;
-    }
+  body {
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
 
-    h1 {
-        @apply text-3xl;
-    }
-    h2 {
-        @apply text-2xl;
-    }
-    h3 {
-        @apply text-xl;
-    }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+
+  input,
+  textarea {
+    @apply border border-slate-300;
+    @apply px-2;
+    @apply py-1;
+    @apply rounded;
+    @apply mb-6;
+    @apply max-w-[450px];
+    @apply focus:border-slate-600;
+    @apply focus:outline-none;
+  }
+
+  input[type="submit"] {
+    @apply text-white;
+    @apply bg-[#8b3c7f];
+    @apply border-0;
+    @apply cursor-pointer;
+    @apply hover:bg-[#571d4e];
+    @apply transition-all;
+    @apply duration-100;
+    @apply ease-linear;
+  }
 }
 
 @layer components {
-    .container {
-        @apply max-w-[1280px];
-        @apply mx-auto;
-    }
+  .container {
+    @apply max-w-[1280px];
+    @apply mx-auto;
+  }
 
-    .main {
-        @apply py-8;
-        min-height: calc(100vh - (76px + 56px));
-    }
+  .main {
+    @apply py-8;
+    min-height: calc(100vh - (76px + 56px));
+  }
 }

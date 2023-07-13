@@ -20,6 +20,7 @@
             >{{ ingredient }}</span
           >
         </div>
+        <AddToCartButton :item="this.food" />
       </div>
     </div>
   </div>
@@ -35,7 +36,9 @@ export default {
     };
   },
   mounted() {
-    const items = foodData.pizzaItems.concat(foodData.rollItems);
+    const items = foodData.pizzaItems
+      .concat(foodData.rollItems)
+      .concat(foodData.salladItems);
 
     this.food = items.find((item) => item.id.toString() === this.foodId);
   },

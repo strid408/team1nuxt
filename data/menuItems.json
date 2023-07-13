@@ -5,27 +5,21 @@
       "name": "Kebabpizza",
       "price": 129,
       "imgUrl": "../images/pizza/kebabpizza.jpg",
-      "ingredients": [
-        "Kebab", "Gurka"
-      ]
+      "ingredients": ["Kebab", "Gurka"]
     },
     {
       "id": 2,
       "name": "Veganpizza",
       "price": 139,
       "imgUrl": "../images/pizza/veganpizza.jpg",
-      "ingredients": [
-        "Seitan", "Vegansk sås"
-      ]
+      "ingredients": ["Seitan", "Vegansk sås"]
     },
     {
       "id": 3,
       "name": "Kanonpizza",
       "price": 149,
       "imgUrl": "../images/pizza/kanonpizza.jpg",
-      "ingredients": [
-        "Awesomesauce", "Pommes"
-      ]
+      "ingredients": ["Awesomesauce", "Pommes"]
     }
   ],
   "rollItems": [
@@ -34,56 +28,44 @@
       "name": "Kebabrulle",
       "price": 129,
       "imgUrl": "../images/rolls/kebab.png",
-      "ingredients": [
-        "Kebab", "Gurka"
-      ]
+      "ingredients": ["Kebab", "Gurka"]
     },
     {
       "id": 5,
       "name": "Falafelrulle",
       "price": 139,
       "imgUrl": "../images/rolls/falafel.jpg",
-      "ingredients": [
-        "Falafel", "Gurka"
-      ]
+      "ingredients": ["Falafel", "Gurka"]
     },
     {
       "id": 6,
       "name": "Grekisk rulle",
       "price": 149,
       "imgUrl": "../images/rolls/grekisk.jpg",
-      "ingredients": [
-        "Fetaost", "Gurka", "Pommes"
-      ]
+      "ingredients": ["Fetaost", "Gurka", "Pommes"]
     }
   ],
-    "salladItems": [
+  "salladItems": [
     {
       "id": 7,
       "name": "Caesarsallad",
       "price": 99,
       "imgUrl": "../images/sallad/ceasar.jpg",
-            "ingredients": [
-        "Kyckling", "Gurka", "Sallad"
-      ]
+      "ingredients": ["Kyckling", "Gurka", "Sallad"]
     },
     {
       "id": 8,
       "name": "Falafelsallad",
       "price": 89,
       "imgUrl": "../images/sallad/falafel.webp",
-            "ingredients": [
-        "Falafel", "Gurka", "Tomat", "Sallad", "Majs"
-      ]
+      "ingredients": ["Falafel", "Gurka", "Tomat", "Sallad", "Majs"]
     },
     {
       "id": 9,
       "name": "Kebabsallad",
       "price": 95,
       "imgUrl": "../images/sallad/kebab.jpg",
-            "ingredients": [
-        "Kebab", "Tomat", "Sallad"
-      ]
+      "ingredients": ["Kebab", "Tomat", "Sallad"]
     }
   ]
 }
