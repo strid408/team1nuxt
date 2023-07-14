@@ -79,8 +79,8 @@ export default {
         }, [])
       )
       .concat(
-        this.food.salladItems.reduce((ingredients, rollItem) => {
-          return ingredients.concat(rollItem.ingredients);
+        this.food.salladItems.reduce((ingredients, salladItems) => {
+          return ingredients.concat(salladItems.ingredients);
         }, [])
       );
     this.ingredients = [...new Set(allIngredients)];
