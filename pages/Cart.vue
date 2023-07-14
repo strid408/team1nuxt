@@ -1,7 +1,10 @@
 <template>
   <div class="main container">
     <h1 class="my-4">Kundvagn</h1>
-    <div v-if="cart.cartItems.length > 0" class="grid grid-cols-12 gap-8">
+    <div
+      v-if="cart.cartItems.length > 0 && !showFormSuccess"
+      class="grid grid-cols-12 gap-8"
+    >
       <div class="col-span-7">
         <h2>Din beställning</h2>
         <div
@@ -41,15 +44,22 @@
 
       <div class="col-span-5 pl-6">
         <h2 class="my-4">Dina uppgifter</h2>
-        <form class="flex flex-col">
-          <label>Namn</label>
-          <input type="text" v-model="name" name="name" placeholder="Namn" />
-          <label>E-post</label>
+        <form class="flex flex-col" id="cartForm" @submit.prevent="sendEmail()">
+          <label>Namn <span class="text-red-600">*</span></label>
+          <input
+            type="text"
+            v-model="name"
+            name="name"
+            placeholder="Namn"
+            required
+          />
+          <label>E-post <span class="text-red-600">*</span></label>
           <input
             type="email"
             v-model="email"
             name="email"
             placeholder="Din e-post"
+            required
           />
           <label>Meddelande till restaurangen</label>
           <textarea
@@ -61,32 +71,61 @@
           >
           </textarea>
           <input type="submit" value="Beställ" />
+          <!-- Hidden inputs, to be sent into formData -->
+          <input type="hidden" v-model="totalPrice" name="totalPrice" />
+          <textarea
+            hidden
+            name="cartItems"
+            v-model="cartItemsText"
+            cols="30"
+            rows="5"
+          ></textarea>
         </form>
+        <p v-if="showFormError" class="text-red-700">
+          Hoppsan! Något gick fel. Vänligen försök igen eller kontakta
+          restaurangen.
+        </p>
       </div>
     </div>
-    <p class="my-8" v-if="cart.cartItems.length === 0">
+    <p class="my-8" v-if="cart.cartItems.length === 0 && !showFormSuccess">
       Din kundvagn är tom :(
     </p>
+    <div v-if="showFormSuccess" class="my-8 text-center">
+      <h3>Tack för din beställning!</h3>
+      <p>
+        Du ska ha fått en e-postbekräftelse med information om din beställning.
+        Kontakta restaurangen om du har några frågor.
+      </p>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { useCartStore } from "@/stores/cart";
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
+import emailjs from "emailjs-com";
 
+const config = useRuntimeConfig();
 const cart = useCartStore();
 const totalPrice = ref(0);
+const name = ref("");
+const email = ref("");
+const message = ref("");
+const showFormError = ref(false);
+const cartItems = ref(cart.cartItems);
+const showFormSuccess = ref(false);
 
 watch(
   () => cart.cartItems,
-  () => {
+  (newCartItems) => {
+    cartItems.value = newCartItems;
     getTotalPrice();
   },
   { immediate: true }
 );
 
 function getTotalPrice() {
-  const prices = cart.cartItems.map((item) => item.price);
+  const prices = cartItems.value.map((item) => item.price);
   const total = prices.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
@@ -94,4 +133,33 @@ function getTotalPrice() {
 
   totalPrice.value = total;
 }
+
+const cartItemsText = computed(() => {
+  return cartItems.value
+    .map((item) => `${item.name} - ${item.price} kr`)
+    .join("\n");
+});
+const sendEmail = () => {
+  emailjs
+    .sendForm(
+      config.public.serviceId,
+      config.public.templateId,
+      "#cartForm",
+      config.public.userId
+    )
+    .then(
+      () => {
+        // Reset form field
+        name.value = "";
+        email.value = "";
+        message.value = "";
+        cart.clear();
+        showFormSuccess.value = true;
+      },
+      (error) => {
+        console.log(error);
+        showFormError.value = true;
+      }
+    );
+};
 </script>
